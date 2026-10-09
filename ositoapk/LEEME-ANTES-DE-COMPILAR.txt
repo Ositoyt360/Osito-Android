@@ -28,3 +28,9 @@ DETALLES TÉCNICOS:
 - Nombre: El Sótano de Osito
 - Identificador: com.osito.sotano
 - Versión: 97.0
+
+
+CAMBIOS DE ESTA VERSION
+- Icono de la aplicación: se usa la imagen personalizada de Osito proporcionada.
+- Nombre visible bajo el icono: El Sótano de Osito.
+- El flujo de GitHub Actions del repositorio raíz genera un archivo llamado El-Sotano-de-Osito.apk dentro del artefacto descargable.
