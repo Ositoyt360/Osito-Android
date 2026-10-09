@@ -1,0 +1,38 @@
+
+name: Crear APK de El Sótano de Osito
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "ositoapk/**"
+      - ".github/workflows/crear-apk.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Configurar Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Configurar Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Compilar APK
+        run: gradle --no-daemon -p ositoapk assembleDebug
+
+      - name: Guardar APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: El-Sotano-de-Osito-APK
+          path: ositoapk/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
