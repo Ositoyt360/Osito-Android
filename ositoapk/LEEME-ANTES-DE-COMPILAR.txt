@@ -1,0 +1,30 @@
+EL SÓTANO DE OSITO — PROYECTO ANDROID
+
+Este proyecto crea una app Android que abre la página publicada:
+https://ositoyt360.github.io/Elsotanodeosito/
+
+Incluye:
+- Pantalla completa, sin barra del navegador.
+- JavaScript, almacenamiento web y cookies activados.
+- Solicitud de permisos Android para micrófono y cámara cuando la web los pide.
+- Navegación atrás y selector de archivos.
+- Carga de la web publicada, por lo que los cambios de la página pueden aparecer sin reinstalar la app.
+- Flujo de GitHub Actions para compilar un APK de prueba (debug).
+
+IMPORTANTE:
+1. Este ZIP es el proyecto fuente para compilar; no es todavía un archivo APK instalable.
+2. El APK necesita compilarse en Android Studio o en GitHub Actions.
+3. La app depende de Internet y de que la página web y sus servicios (IA/Firebase/API) estén funcionando.
+4. Las funciones que el navegador móvil no soporte o que la web no implemente correctamente no quedan garantizadas solo por empaquetar la página.
+5. El APK generado por la acción es de prueba (debug), no está firmado para publicación en Google Play.
+
+COMPILACIÓN EN GITHUB ACTIONS:
+- Sube el contenido de este proyecto a un repositorio de GitHub.
+- Abre la pestaña Actions y ejecuta “Crear APK de El Sótano de Osito” con Run workflow.
+- Cuando termine, entra en el resultado de la ejecución y descarga el artefacto “El-Sotano-de-Osito-APK”.
+- Dentro del ZIP descargado estará app-debug.apk.
+
+DETALLES TÉCNICOS:
+- Nombre: El Sótano de Osito
+- Identificador: com.osito.sotano
+- Versión: 97.0

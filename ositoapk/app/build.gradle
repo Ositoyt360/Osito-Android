@@ -1,0 +1,13 @@
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'com.osito.sotano'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'com.osito.sotano'
+        minSdk 23
+        targetSdk 35
+        versionCode 97
+        versionName '97.0'
+    }
+}
